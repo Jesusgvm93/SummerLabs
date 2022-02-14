@@ -7,18 +7,24 @@ public class Magic : MonoBehaviour
 {
 
     public GameObject arCamera;
+    public Camera arCameraB;
     public GameObject explosion;
-    //public GameObject shield;
+    public GameObject shield;
+    public GameObject objectToDisable;
+    public static bool button = false;
+    public Button shieldB;
 
     RaycastHit hit;
 
-    
+    void Start()
+    {
+        Button btn = shieldB.GetComponent<Button>();
+        btn.onClick.AddListener(Shield);
+    }
+
     void Update()
     {
-
         AttackMagic();
-        //Shield();
-       
     }
 
     public void AttackMagic()
@@ -27,7 +33,7 @@ public class Magic : MonoBehaviour
         {
             if (Physics.Raycast(arCamera.transform.position, arCamera.transform.forward, out hit))
             {
-                if (hit.transform.tag == "Cat")
+                if (hit.transform.tag == "Draugr")
                 {
                     Destroy(hit.transform.gameObject);
                     Instantiate(explosion, hit.transform.position, hit.transform.rotation);
@@ -37,17 +43,29 @@ public class Magic : MonoBehaviour
         }
     }
 
-    /*public void Shield()
+    private void Shield()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        Debug.Log("IsClicking");
+        button = true;
+        if (button == true)
         {
-                    Instantiate(shield, hit.transform.position, hit.transform.rotation);
-                    Destroy(shield, 1f);
+            if (Input.touchCount > 2 )
+            {
+                Vector3 touchPos = arCameraB.WorldToScreenPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
+                Instantiate(shield, touchPos, Quaternion.identity);
+            }
+            StartCoroutine("CountDownShield");
         }
+        
+        
     }
 
     private IEnumerator CountDownShield()
     {
-        yield return new WaitForSeconds(2f);
-    }*/
+        objectToDisable.SetActive(false);
+        yield return new WaitForSeconds(3f);
+        objectToDisable.SetActive(true);
+        button = false;
+
+    }
 }

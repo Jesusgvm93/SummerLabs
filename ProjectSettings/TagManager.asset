@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cat
   - Wizard
+  - Draugr
   layers:
   - Default
   - TransparentFX
