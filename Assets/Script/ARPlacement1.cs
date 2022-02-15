@@ -61,15 +61,12 @@ public class ARPlacement1 : MonoBehaviour
             markerIndicator.SetActive(true);
             markerIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
         }
-        else if (spawendObject2 == null && placementPoseIsValid2)
+        else if (spawendObject2 == null && spawendObject3 == null && placementPoseIsValid2 && placementPoseIsValid3)
         {
             markerIndicator.SetActive(true);
             markerIndicator.transform.SetPositionAndRotation(placementPose2.position, placementPose2.rotation);
-        }
-        else if (spawendObject3 == null && placementPoseIsValid3)
-        {
-            markerIndicator.SetActive(true);
             markerIndicator.transform.SetPositionAndRotation(placementPose3.position, placementPose3.rotation);
+
         }
         else
         {
@@ -116,7 +113,7 @@ public class ARPlacement1 : MonoBehaviour
 
     void ARPlaceObject3()
     {
-        spawendObject2 = Instantiate(arObject2, placementPose2.position, placementPose2.rotation);
+        spawendObject3 = Instantiate(arObject3, placementPose3.position, placementPose3.rotation);
     }
 
 }
