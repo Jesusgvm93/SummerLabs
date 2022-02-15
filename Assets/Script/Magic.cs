@@ -46,7 +46,7 @@ public class Magic : MonoBehaviour
     private void Shield()
     {
         Debug.Log("IsClicking");
-        button = true;
+        //button = true;
         if (button == true)
         {
             if (Input.touchCount > 2 )

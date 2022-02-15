@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowUp : MonoBehaviour
 {
     public Transform objectToFollow;
-    private float speed = 0.07f;
+    public float speed = 0.07f;
     void Update()
     {
 
