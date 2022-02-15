@@ -67,7 +67,7 @@ public class ARPlacement1 : MonoBehaviour
             markerIndicator.transform.SetPositionAndRotation(placementPose2.position, placementPose2.rotation);
             markerIndicator.transform.SetPositionAndRotation(placementPose3.position, placementPose3.rotation);
 
-        }
+        } 
         else
         {
             markerIndicator.SetActive(false);
