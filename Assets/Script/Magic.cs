@@ -24,6 +24,7 @@ public class Magic : MonoBehaviour
 
     void Update()
     {
+
         AttackMagic();
     }
 
@@ -46,16 +47,9 @@ public class Magic : MonoBehaviour
     private void Shield()
     {
         Debug.Log("IsClicking");
-        //button = true;
-        if (button == true)
-        {
-            if (Input.touchCount > 2 )
-            {
-                Vector3 touchPos = arCameraB.WorldToScreenPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
-                Instantiate(shield, touchPos, Quaternion.identity);
-            }
-            StartCoroutine("CountDownShield");
-        }
+        Instantiate(shield, new Vector3(1, 1, 1), Quaternion.identity);
+        StartCoroutine("CountDownShield");
+        
         
         
     }
