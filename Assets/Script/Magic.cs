@@ -10,6 +10,7 @@ public class Magic : MonoBehaviour
     public Camera arCameraB;
     public GameObject explosion;
     public GameObject wall;
+    private GameObject wallS;
     public GameObject objectToDisable;
     public static bool button = false;
     public Button shieldB;
@@ -24,8 +25,12 @@ public class Magic : MonoBehaviour
 
     void Update()
     {
-
         AttackMagic();
+        
+        if (gameObject.name == "Cube(Clone)")
+        {
+            Destroy(gameObject, 5);
+        }
     }
 
     public void AttackMagic()
@@ -47,8 +52,8 @@ public class Magic : MonoBehaviour
     private void Shield()
     {
         Debug.Log("IsClicking");
-        Instantiate(wall, new Vector3(1, 1, 1), Quaternion.identity);
-        Destroy(wall, 2f);
+        wallS = Instantiate(wall, new Vector3(1, 1, 1), Quaternion.identity);
+        Destroy(wallS , 2f);
         StartCoroutine("CountDownShield");
 
     }
