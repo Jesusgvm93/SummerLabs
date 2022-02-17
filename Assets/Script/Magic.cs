@@ -9,7 +9,7 @@ public class Magic : MonoBehaviour
     public GameObject arCamera;
     public Camera arCameraB;
     public GameObject explosion;
-    public GameObject shield;
+    public GameObject wall;
     public GameObject objectToDisable;
     public static bool button = false;
     public Button shieldB;
@@ -47,11 +47,10 @@ public class Magic : MonoBehaviour
     private void Shield()
     {
         Debug.Log("IsClicking");
-        Instantiate(shield, new Vector3(1, 1, 1), Quaternion.identity);
+        Instantiate(wall, new Vector3(1, 1, 1), Quaternion.identity);
+        Destroy(wall, 2f);
         StartCoroutine("CountDownShield");
-        
-        
-        
+
     }
 
     private IEnumerator CountDownShield()
@@ -59,7 +58,5 @@ public class Magic : MonoBehaviour
         objectToDisable.SetActive(false);
         yield return new WaitForSeconds(3f);
         objectToDisable.SetActive(true);
-        button = false;
-
     }
 }
