@@ -52,8 +52,16 @@ public class Magic : MonoBehaviour
     private void Shield()
     {
         Debug.Log("IsClicking");
-        wallS = Instantiate(wall, new Vector3(1, 1, 1), Quaternion.identity);
-        Destroy(wallS , 2f);
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            wallS = Instantiate(wall, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
+            //wallS = Instantiate(wall, new Vector3(1, 1, 1), Quaternion.identity);
+            Destroy(wallS, 2f);
+
+        }
+      
         StartCoroutine("CountDownShield");
 
     }
