@@ -25,11 +25,15 @@ public class Magic : MonoBehaviour
 
     void Update()
     {
-        AttackMagic();
         
-        if (gameObject.name == "Cube(Clone)")
+        AttackMagic();
+
+        if (Input.GetButtonDown("Fire1") && button == true)
         {
-            Destroy(gameObject, 5);
+            Debug.Log("Fire1");
+            Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            wallS = Instantiate(wall, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
+            Destroy(wallS, 2f);
         }
     }
 
@@ -52,16 +56,7 @@ public class Magic : MonoBehaviour
     private void Shield()
     {
         Debug.Log("IsClicking");
-        
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            wallS = Instantiate(wall, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
-            //wallS = Instantiate(wall, new Vector3(1, 1, 1), Quaternion.identity);
-            Destroy(wallS, 2f);
-
-        }
-      
+        button = true;    
         StartCoroutine("CountDownShield");
 
     }
@@ -71,5 +66,6 @@ public class Magic : MonoBehaviour
         objectToDisable.SetActive(false);
         yield return new WaitForSeconds(3f);
         objectToDisable.SetActive(true);
+        button = false;
     }
 }
