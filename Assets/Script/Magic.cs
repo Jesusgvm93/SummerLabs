@@ -7,7 +7,6 @@ public class Magic : MonoBehaviour
 {
 
     public GameObject arCamera;
-    public Camera arCameraB;
     public GameObject explosion;
     public GameObject wall;
     private GameObject wallS;
@@ -27,12 +26,14 @@ public class Magic : MonoBehaviour
     {
         
         AttackMagic();
-
-        if (Input.GetButtonDown("Fire1") && button == true)
+        if (Input.touchCount > 0 && Input.GetTouch(1).phase == TouchPhase.Began)
+        //if (Input.GetButtonDown("Fire1") && button == true)
         {
             Debug.Log("Fire1");
-            Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            wallS = Instantiate(wall, new Vector3(cursorPos.x, cursorPos.y, 0), Quaternion.identity);
+            //Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 cursorPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            wallS = Instantiate(wall, new Vector3(cursorPos.x, cursorPos.y, 0f), Quaternion.identity);
+            //wallS = Instantiate(wall, cursorPos, Quaternion.identity);
             Destroy(wallS, 2f);
         }
     }
