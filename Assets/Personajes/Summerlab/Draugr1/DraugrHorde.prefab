@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.3
+  speed: 0.085
 --- !u!54 &1961468095878016831
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.3
+  speed: 0.085
 --- !u!54 &6986005125740781285
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.3
+  speed: 0.085
 --- !u!54 &2841812156924366825
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.3
+  speed: 0.085
 --- !u!54 &4352078649423753726
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.3
+  speed: 0.085
 --- !u!54 &637192005770585159
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.3
+  speed: 0.085
 --- !u!1 &6350890526996785005
 GameObject:
   m_ObjectHideFlags: 0
