@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.2
+  speed: 1
 --- !u!1 &3846116926850928410
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.2
+  speed: 1
 --- !u!54 &680679936774549363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.2
+  speed: 1
 --- !u!54 &3243272061599066292
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 3743910896316306696, guid: 0ccad306e4ba6954bb1c53a0313efd56, type: 3}
-  speed: 0.2
+  speed: 1
 --- !u!1001 &469087030300809040
 PrefabInstance:
   m_ObjectHideFlags: 0

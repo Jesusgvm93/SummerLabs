@@ -10,10 +10,12 @@ public class Menu : MonoBehaviour
     public GameObject objectToDisable;
     public GameObject objectToEnable1;
     public GameObject objectToDisable1;
+    public GameObject objectToEnable2;
+ 
 
     public void StartScene()
     {
-     SceneManager.LoadScene(1);
+        StartCoroutine("StartGame");
     }
 
     public void Settings()
@@ -32,6 +34,15 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit");
+    }
+
+    private IEnumerator StartGame()
+    {
+        objectToDisable.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        objectToEnable2.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(1);
     }
 
 }
