@@ -29,8 +29,8 @@ public class Magic : MonoBehaviour
         
         AttackMagic();
         
-        if (Input.GetButtonDown("Fire1") && button == true)
-        //if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && button == true)
+        //if (Input.GetButtonDown("Fire1") && button == true)
+        if (Input.touchCount > 0 /*&& Input.GetTouch(0).phase == TouchPhase.Began */&& button == true)
         {
             mousePos = Input.mousePosition;
             mousePos.z = 2.0f;
@@ -62,7 +62,6 @@ public class Magic : MonoBehaviour
         Debug.Log("IsClicking");
         button = true;    
         StartCoroutine("CountDownShield");
-
     }
 
     private IEnumerator CountDownShield()
