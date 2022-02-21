@@ -13,6 +13,8 @@ public class Magic : MonoBehaviour
     public GameObject objectToDisable;
     public static bool button = false;
     public Button shieldB;
+    private Vector3 mousePos;
+    private Vector3 prefab;
 
     RaycastHit hit;
 
@@ -26,14 +28,15 @@ public class Magic : MonoBehaviour
     {
         
         AttackMagic();
-        if (Input.touchCount > 0 && Input.GetTouch(1).phase == TouchPhase.Began)
-        //if (Input.GetButtonDown("Fire1") && button == true)
+        
+        if (Input.GetButtonDown("Fire1") && button == true)
+        //if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && button == true)
         {
-            Debug.Log("Fire1");
-            //Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 cursorPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            wallS = Instantiate(wall, new Vector3(cursorPos.x, cursorPos.y, 0f), Quaternion.identity);
-            //wallS = Instantiate(wall, cursorPos, Quaternion.identity);
+            mousePos = Input.mousePosition;
+            mousePos.z = 2.0f;
+            prefab = Camera.main.ScreenToWorldPoint(mousePos);
+            wallS = Instantiate(wall, prefab, Quaternion.identity);
+            button = false;
             Destroy(wallS, 2f);
         }
     }

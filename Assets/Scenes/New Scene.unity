@@ -819,8 +819,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122982634}
-  m_LocalRotation: {x: -0.011999427, y: -0.011999269, z: -0.00014392796, w: 0.999856}
-  m_LocalPosition: {x: 0.0045094267, y: 0.25425425, z: -4.151162}
+  m_LocalRotation: {x: -0.0000000018626451, y: -0.0000000018626451, z: -4.3655746e-11, w: 1}
+  m_LocalPosition: {x: -0.04756254, y: 0.17736487, z: -1.3895843}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -949,7 +949,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arCamera: {fileID: 1122982634}
-  arCameraB: {fileID: 1122982636}
   explosion: {fileID: 0}
   wall: {fileID: 5658289891130307608, guid: 0d10c06d13dc387438a8f746c5d39021, type: 3}
   objectToDisable: {fileID: 1991666379}
