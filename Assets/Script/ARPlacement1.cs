@@ -21,6 +21,8 @@ public class ARPlacement1 : MonoBehaviour
     private bool placementPoseIsValid = false;
     private bool placementPoseIsValid2 = false;
     private bool placementPoseIsValid3 = false;
+    public AudioSource setMarker;
+    public AudioSource findMarker;
 
 
     void Start()
@@ -56,10 +58,15 @@ public class ARPlacement1 : MonoBehaviour
 
     void UpdatemakerIndicator()
     {
+        
+
         if (spawendObject == null && placementPoseIsValid)
         {
             markerIndicator.SetActive(true);
             markerIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
+            //findMarker.Play();
+
+
         }
         else if (spawendObject2 == null && spawendObject3 == null && placementPoseIsValid2 && placementPoseIsValid3)
         {
@@ -103,6 +110,7 @@ public class ARPlacement1 : MonoBehaviour
     void ARPlaceObject()
     {
         spawendObject = Instantiate(arObject, placementPose.position, placementPose.rotation);
+        setMarker.Play();
 
     }
 

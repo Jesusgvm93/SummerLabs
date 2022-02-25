@@ -11,7 +11,8 @@ public class Menu : MonoBehaviour
     public GameObject objectToEnable1;
     public GameObject objectToDisable1;
     public GameObject objectToEnable2;
- 
+    public GameObject objectToEnable3;
+
 
     public void StartScene()
     {
@@ -38,6 +39,7 @@ public class Menu : MonoBehaviour
 
     private IEnumerator StartGame()
     {
+        objectToEnable3.SetActive(true);
         objectToDisable.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         objectToEnable2.SetActive(true);

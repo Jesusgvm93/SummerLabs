@@ -15,6 +15,7 @@ public class Magic : MonoBehaviour
     public Button shieldB;
     private Vector3 mousePos;
     private Vector3 prefab;
+    public AudioSource wallSound;
 
     RaycastHit hit;
 
@@ -29,13 +30,14 @@ public class Magic : MonoBehaviour
         
         AttackMagic();
         
-        //if (Input.GetButtonDown("Fire1") && button == true)
-        if (Input.touchCount > 0 /*&& Input.GetTouch(0).phase == TouchPhase.Began */&& button == true)
+        if (Input.GetButtonDown("Fire1") && button == true)
+        //if (Input.touchCount > 0  && Input.GetTouch(0).phase == TouchPhase.Began && button == true)
         {
-            mousePos = Input.mousePosition;
-            mousePos.z = 2.0f;
+            mousePos = Input.mousePosition;   // Input.GetTouch(0).position;
+            mousePos.z = 1.5f;
             prefab = Camera.main.ScreenToWorldPoint(mousePos);
             wallS = Instantiate(wall, prefab, Quaternion.identity);
+            wallSound.Play();
             button = false;
             Destroy(wallS, 2f);
         }

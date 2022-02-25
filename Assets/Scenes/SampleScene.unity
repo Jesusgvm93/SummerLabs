@@ -882,6 +882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 4066236805446282602, guid: 737abb0b08808234e95d1d00c0ae21e0, type: 3}
+  speed: 0.07
 --- !u!1 &633987594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 4066236805446282602, guid: 737abb0b08808234e95d1d00c0ae21e0, type: 3}
+  speed: 0.07
 --- !u!1 &1492571579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6896506615043231106, guid: 859a8f1ed5a36dd4baff925cdc34dfe2, type: 3}
@@ -1613,6 +1615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 4066236805446282602, guid: 737abb0b08808234e95d1d00c0ae21e0, type: 3}
+  speed: 0.07
 --- !u!1 &1562069058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,6 +1892,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arCamera: {fileID: 259715463}
   explosion: {fileID: 100002, guid: c17698f595aa942cab4326f0ffaf25c2, type: 3}
+  wall: {fileID: 0}
+  objectToDisable: {fileID: 0}
+  shieldB: {fileID: 0}
 --- !u!4 &1805420398
 Transform:
   m_ObjectHideFlags: 0
@@ -2000,6 +2006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 4066236805446282602, guid: 737abb0b08808234e95d1d00c0ae21e0, type: 3}
+  speed: 0.07
 --- !u!1001 &1926444571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2126,6 +2133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 4066236805446282602, guid: 737abb0b08808234e95d1d00c0ae21e0, type: 3}
+  speed: 0.07
 --- !u!65 &1935716844
 BoxCollider:
   m_ObjectHideFlags: 0
