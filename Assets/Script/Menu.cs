@@ -39,11 +39,11 @@ public class Menu : MonoBehaviour
 
     private IEnumerator StartGame()
     {
-        objectToEnable3.SetActive(true);
+        /*objectToEnable3.SetActive(true);
         objectToDisable.SetActive(false);
         yield return new WaitForSeconds(0.5f);
-        objectToEnable2.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        objectToEnable2.SetActive(true);*/
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(2);
     }
 

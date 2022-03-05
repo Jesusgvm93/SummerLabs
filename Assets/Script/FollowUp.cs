@@ -18,7 +18,11 @@ public class FollowUp : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Collision");
-        SceneManager.LoadScene(0);
+        if (collision.gameObject.tag == "Wizard")
+        {
+            SceneManager.LoadScene(4);
+        }
+            
     }
 
 
