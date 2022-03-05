@@ -10,6 +10,7 @@ public class test : MonoBehaviour
     public GameObject wall;
     private GameObject wallS;
     public static bool button = false;
+    public float dWall;
     public GameObject objectToDisable;
     public Button shieldB;
     void Start()
@@ -21,16 +22,16 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetButtonDown("Fire1") && button == true)
-        if (Input.touchCount > 0  && Input.GetTouch(0).phase == TouchPhase.Began && button == true)
+        if (Input.GetButtonDown("Fire1") && button == true)
+        //if (Input.touchCount > 0  && Input.GetTouch(0).phase == TouchPhase.Began && button == true)
         {
-            mousePos = Input.GetTouch(0).position; //Input.mousePosition;   // 
-            mousePos.z = 1.5f;
+            mousePos = Input.mousePosition;  // Input.GetTouch(0).position; 
+            mousePos.z = dWall;
             prefab = Camera.main.ScreenToWorldPoint(mousePos);
-            wallS = Instantiate(wall, prefab, Quaternion.identity);
+            wallS = Instantiate(wall, prefab, Quaternion.Euler(0f,90f,0f) ); //Quaternion.identity
             //wallSound.Play();
             button = false;
-            Destroy(wallS, 2f);
+            Destroy(wallS, 3f);
         }
     }
 
