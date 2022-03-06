@@ -6,7 +6,7 @@ public class Magic : MonoBehaviour
 {
 
     public GameObject arCamera;
-    public GameObject explosion;
+    //public GameObject explosion;
 
     RaycastHit hit;
     void Update()
@@ -16,6 +16,9 @@ public class Magic : MonoBehaviour
 
     public void AttackMagic()
     {
+    
+
+
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         //if (Input.GetButtonDown("Fire1"))
         {
@@ -24,10 +27,12 @@ public class Magic : MonoBehaviour
                 if (hit.transform.tag == "Draugr")
                 {
                     Destroy(hit.transform.gameObject);
-                    Instantiate(explosion, hit.transform.position, hit.transform.rotation);
-                    Destroy(explosion, 2f);
+                    //Instantiate(explosion, hit.transform.position, hit.transform.rotation);
+                    //Destroy(explosion, 2f);
                 }
             }
         }
+
+
     }
 }

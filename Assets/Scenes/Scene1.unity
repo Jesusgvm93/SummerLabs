@@ -390,7 +390,6 @@ MonoBehaviour:
   markerIndicator: {fileID: 40919614}
   shoot: {fileID: 1805420396}
   setMarker: {fileID: 66126185}
-  findMarker: {fileID: 0}
 --- !u!4 &223974228
 Transform:
   m_ObjectHideFlags: 0
@@ -990,11 +989,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arCamera: {fileID: 259715463}
-  explosion: {fileID: 5021262224307714667, guid: 64655c6d3fa346d448c83a4f9daddbea, type: 3}
-  wall: {fileID: 5658289891130307608, guid: 0d10c06d13dc387438a8f746c5d39021, type: 3}
-  objectToDisable: {fileID: 1035347318}
-  shieldB: {fileID: 1035347320}
-  wallSound: {fileID: 0}
 --- !u!4 &1805420398
 Transform:
   m_ObjectHideFlags: 0
@@ -1188,3 +1182,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2131099548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131099550}
+  - component: {fileID: 2131099549}
+  m_Layer: 0
+  m_Name: Shield
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2131099549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131099548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166fcbc8ee035dd47a7459420a583449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ARRaycastManager: {fileID: 165585585}
+  wall: {fileID: 5658289891130307608, guid: 0d10c06d13dc387438a8f746c5d39021, type: 3}
+  shieldB: {fileID: 1035347320}
+  objectToDisable: {fileID: 1035347318}
+--- !u!4 &2131099550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131099548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.80401623, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

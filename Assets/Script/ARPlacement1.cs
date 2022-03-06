@@ -22,7 +22,7 @@ public class ARPlacement1 : MonoBehaviour
     private bool placementPoseIsValid2 = false;
     private bool placementPoseIsValid3 = false;
     public AudioSource setMarker;
-    public AudioSource findMarker;
+    //public AudioSource findMarker;
 
 
     void Start()

@@ -1122,6 +1122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arCamera: {fileID: 1122982634}
+  explosion: {fileID: 0}
 --- !u!4 &1475676647
 Transform:
   m_ObjectHideFlags: 0
