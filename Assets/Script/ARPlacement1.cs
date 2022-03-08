@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.SceneManagement;
 
 public class ARPlacement1 : MonoBehaviour
 {
@@ -54,6 +55,7 @@ public class ARPlacement1 : MonoBehaviour
 
         UpdatePlacementPose();
         UpdatemakerIndicator();
+        //Victory();
     }
 
     void UpdatemakerIndicator()
@@ -123,5 +125,13 @@ public class ARPlacement1 : MonoBehaviour
     {
         spawendObject3 = Instantiate(arObject3, placementPose3.position, placementPose3.rotation);
     }
+
+    /*void Victory()
+    {
+        if (GameObject.FindGameObjectsWithTag("Draugr").Length == 0)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }*/
 
 }
