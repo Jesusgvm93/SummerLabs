@@ -13,7 +13,6 @@ public class Test1 : MonoBehaviour
     public GameObject wall;
     public Button shieldB;
     public GameObject objectToDisable;
-    // Start is called before the first frame update
     void Start()
     {
         Button btn = shieldB.GetComponent<Button>();
@@ -21,7 +20,6 @@ public class Test1 : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.touchCount > 0 && button == true)

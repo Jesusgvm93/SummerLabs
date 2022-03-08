@@ -1,38 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class Magic : MonoBehaviour
 {
-
-    public GameObject arCamera;
-    //public GameObject explosion;
-
-    RaycastHit hit;
+    public ARRaycastManager ARRaycastManager;
+    private List<ARRaycastHit> aRRaycastHitsList = new List<ARRaycastHit>();
+    public GameObject explosion;
+    public Camera arCamera;
     void Update()
-    {   
-        AttackMagic();
-    }
-
-    public void AttackMagic()
     {
-    
-
-
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0 )      
         //if (Input.GetButtonDown("Fire1"))
         {
-            if (Physics.Raycast(arCamera.transform.position, arCamera.transform.forward, out hit))
-            {
-                if (hit.transform.tag == "Draugr")
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            { 
+                RaycastHit hit;
+                //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = arCamera.ScreenPointToRay(Input.touches[0].position);//Camera.main.ScreenPointToRay(Input.touches[0].position);
+                if (Physics.Raycast(ray, out hit))
                 {
+                    if (hit.transform.tag == "Draugr")
+                    {
                     Destroy(hit.transform.gameObject);
+                    GameObject explosionS = Instantiate(explosion, hit.transform.position, hit.transform.rotation);
+                    //explosionS.transform.position = explosion.transform.position;
                     //Instantiate(explosion, hit.transform.position, hit.transform.rotation);
-                    //Destroy(explosion, 2f);
+                    Destroy(explosionS, 2f);
+                    }
                 }
             }
         }
-
-
     }
 }

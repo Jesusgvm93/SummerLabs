@@ -7,16 +7,16 @@ public class ARPlacement : MonoBehaviour
 {
 
     public GameObject arObject;
-    public GameObject arObject2;
+    //public GameObject arObject2;
     public GameObject markerIndicator;
     public GameObject shoot;
     private GameObject spawendObject;
-    private GameObject spawendObject2;
+    //private GameObject spawendObject2;
     private Pose placementPose;
-    private Pose placementPose2;
+    //private Pose placementPose2;
     private ARRaycastManager aRRaycastManager;
     private bool placementPoseIsValid = false;
-    private bool placementPoseIsValid2 = false;
+    //private bool placementPoseIsValid2 = false;
 
 
     void Start()
@@ -34,11 +34,11 @@ public class ARPlacement : MonoBehaviour
             shoot.SetActive(true);
         }
 
-        if (spawendObject2 == null && placementPoseIsValid2 && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        /*if (spawendObject2 == null && placementPoseIsValid2 && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             ARPlaceObject2();
             shoot.SetActive(true);
-        }
+        }*/
 
         UpdatePlacementPose();
         UpdatemakerIndicator();
@@ -51,11 +51,11 @@ public class ARPlacement : MonoBehaviour
             markerIndicator.SetActive(true);
             markerIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
         }
-        else if (spawendObject2 == null && placementPoseIsValid2)
+        /*else if (spawendObject2 == null && placementPoseIsValid2)
         {
             markerIndicator.SetActive(true);
             markerIndicator.transform.SetPositionAndRotation(placementPose2.position, placementPose2.rotation);
-        }
+        }*/
         else
         {
             markerIndicator.SetActive(false);
@@ -74,11 +74,11 @@ public class ARPlacement : MonoBehaviour
             placementPose = hits[0].pose;
         }
 
-        placementPoseIsValid2 = hits.Count > 0;
+        /*placementPoseIsValid2 = hits.Count > 0;
         if (placementPoseIsValid2)
         {
             placementPose2 = hits[0].pose;
-        }
+        }*/
     }
 
 
@@ -88,9 +88,9 @@ public class ARPlacement : MonoBehaviour
 
     }
 
-    void ARPlaceObject2()
+    /*void ARPlaceObject2()
     {
         spawendObject2 = Instantiate(arObject2, placementPose2.position, placementPose2.rotation);
-    }
+    }*/
 
 }

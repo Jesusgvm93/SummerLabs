@@ -7,7 +7,7 @@ public class Magic1 : MonoBehaviour
 {
 
     public GameObject arCamera;
-    public GameObject explosion;
+    //public GameObject explosion;
     //public GameObject shield;
 
     RaycastHit hit;
@@ -30,8 +30,8 @@ public class Magic1 : MonoBehaviour
                 if (hit.transform.tag == "Cat")
                 {
                     Destroy(hit.transform.gameObject);
-                    Instantiate(explosion, hit.transform.position, hit.transform.rotation);
-                    Destroy(explosion, 2f);
+                    //Instantiate(explosion, hit.transform.position, hit.transform.rotation);
+                    //Destroy(explosion, 2f);
                 }
             }
         }

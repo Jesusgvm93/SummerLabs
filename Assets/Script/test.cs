@@ -29,16 +29,14 @@ public class test : MonoBehaviour
         {
             var hits = new List<ARRaycastHit>();
             if (aRRaycastManager.Raycast(Input.GetTouch(0).position, hits))
-            {
-            
-                
-            /*mousePos = Input.GetTouch(0).position;  //Input.mousePosition;  //  
+            {            
+            mousePos = Input.GetTouch(0).position;  //Input.mousePosition;  //  
             mousePos.z = dWall;
             prefab = Camera.main.ScreenToWorldPoint(mousePos);
             wallS = Instantiate(wall, prefab, Quaternion.Euler(0f,90f,0f) ); //Quaternion.identity
             //wallSound.Play();
             button = false;
-            Destroy(wallS, 3f);*/
+            Destroy(wallS, 3f);
             }
            
         }
