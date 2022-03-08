@@ -22,6 +22,10 @@ public class FollowUp : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+        else if (collision.gameObject.tag == "Draugr")
+        {
+            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+        }
             
     }
 

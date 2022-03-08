@@ -26,6 +26,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277add64a617e3b4f9c9dcf7a87cced9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6167990911164163741
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088947075139866546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.54976463, y: 0.5903261, z: 0.20029362}
+  m_Center: {x: 0.021955382, y: 0.26275927, z: 0.004527252}
 --- !u!1001 &3782938349130003171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95,7 +108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e238d44c8ba8d0c4c9c237c559a0d894, type: 3}
       propertyPath: m_TagString
-      value: Draugr
+      value: Wizard
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: e238d44c8ba8d0c4c9c237c559a0d894, type: 3}
       propertyPath: m_Controller
