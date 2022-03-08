@@ -27,7 +27,7 @@ public class Magic : MonoBehaviour
                     GameObject explosionS = Instantiate(explosion, hit.transform.position, hit.transform.rotation);
                     //explosionS.transform.position = explosion.transform.position;
                     //Instantiate(explosion, hit.transform.position, hit.transform.rotation);
-                    Destroy(explosionS, 2f);
+                    Destroy(explosionS, 1f);
                     }
                 }
             }
