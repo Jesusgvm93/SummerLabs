@@ -56,6 +56,7 @@ public class ARPlacement1 : MonoBehaviour
         UpdatePlacementPose();
         UpdatemakerIndicator();
         //Victory();
+        //StartCoroutine("Win");
     }
 
     void UpdatemakerIndicator()
@@ -126,9 +127,12 @@ public class ARPlacement1 : MonoBehaviour
         spawendObject3 = Instantiate(arObject3, placementPose3.position, placementPose3.rotation);
     }
 
-    /*void Victory()
+    /*private IEnumerator Win()
     {
-        if (GameObject.FindGameObjectsWithTag("Draugr").Length == 0)
+        yield return new WaitForSeconds(10f);
+        int enemies = GameObject.FindGameObjectsWithTag("Draugr").Length;
+        Debug.Log(enemies);
+        if (enemies == 0)
         {
             SceneManager.LoadScene(1);
         }
