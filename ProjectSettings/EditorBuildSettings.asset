@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Defeat.unity
     guid: a69ccf92b31ac9e4198d37efeba2c32a
+  - enabled: 1
+    path: Assets/Scenes/SecondRound.unity
+    guid: ab607a8bf680cd3478597a23cd072e66
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 20a30af412e1f86409f1479e6ef3c824, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 65d3757b3de756d46808cb2ab38b28ee, type: 2}
