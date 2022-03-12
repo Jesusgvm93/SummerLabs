@@ -12,11 +12,9 @@ public class ARPlacement1 : MonoBehaviour
     public GameObject arObject3;
     public GameObject objectToEnable;
     public GameObject markerIndicator;
-    //public GameObject shoot;
     private GameObject spawendObject;
     private GameObject spawendObject2;
     private GameObject spawendObject3;
-    private int enemies;
     private Pose placementPose;
     private Pose placementPose2;
     private Pose placementPose3;
@@ -34,7 +32,6 @@ public class ARPlacement1 : MonoBehaviour
     void Start()
     {
         aRRaycastManager = FindObjectOfType<ARRaycastManager>();
-        //shoot.SetActive(false);
     }
 
 
@@ -43,37 +40,20 @@ public class ARPlacement1 : MonoBehaviour
         if (spawendObject == null && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             ARPlaceObject();
-            
-            //shoot.SetActive(true);
         }
 
         if (spawendObject2 == null && placementPoseIsValid2 && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             ARPlaceObject2();
-            
-            //shoot.SetActive(true);
         }
 
         if (spawendObject3 == null && placementPoseIsValid3 && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             ARPlaceObject3();
-            
-            //shoot.SetActive(true);
         }
         UpdatePlacementPose();
         UpdatemakerIndicator();
-        
-        //if (ready == true && ready2 == true && ready3 == true)
-        //{
-            enemies = GameObject.FindGameObjectsWithTag("Draugr").Length;
-            if (enemies == 10)
-            {
-                objectToEnable.SetActive(true);
-            }
-            //
-       // }
-        //Victory();
-        //StartCoroutine("Win");
+       
     }
 
     private void FixedUpdate()
@@ -136,31 +116,18 @@ public class ARPlacement1 : MonoBehaviour
     {
         spawendObject = Instantiate(arObject, placementPose.position, placementPose.rotation);
         setMarker.Play();
-        //ready = true;
-
     }
 
     void ARPlaceObject2()
     {
         spawendObject2 = Instantiate(arObject2, placementPose2.position, placementPose2.rotation);
-        //ready2 = true;
     }
 
     void ARPlaceObject3()
     {
         spawendObject3 = Instantiate(arObject3, placementPose3.position, placementPose3.rotation);
-        //ready3 = true;
     }
 
-    /*private IEnumerator Win()
-    {
-        yield return new WaitForSeconds(10f);
-        int enemies = GameObject.FindGameObjectsWithTag("Draugr").Length;
-        Debug.Log(enemies);
-        if (enemies == 0)
-        {
-            SceneManager.LoadScene(1);
-        }
-    }*/
+ 
 
 }
