@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Logo.unity
-    guid: de075e144d8a39742921cc91d9bef320
+    guid: bdfd3b4bab6e120499e344aae5f7076e
   - enabled: 1
     path: "Assets/Scenes/Men\xFA.unity"
     guid: c05acf99e92034d449541229b359e1aa
@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victory.unity
     guid: 52d1559c4d586344da314acf09c07a90
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c961794d09c90e241aa89f30b299140d
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 20a30af412e1f86409f1479e6ef3c824, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 65d3757b3de756d46808cb2ab38b28ee, type: 2}

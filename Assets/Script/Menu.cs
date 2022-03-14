@@ -44,7 +44,7 @@ public class Menu : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         objectToEnable2.SetActive(true);*/
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
 }
