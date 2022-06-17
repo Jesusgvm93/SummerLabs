@@ -8,6 +8,7 @@ public class Magic : MonoBehaviour
     public ARRaycastManager ARRaycastManager;
     private List<ARRaycastHit> aRRaycastHitsList = new List<ARRaycastHit>();
     public GameObject explosion;
+    public GameObject soundExplosion;
     public Camera arCamera;
     void Update()
     {
@@ -25,9 +26,11 @@ public class Magic : MonoBehaviour
                     {
                     Destroy(hit.transform.gameObject);
                     GameObject explosionS = Instantiate(explosion, hit.transform.position, hit.transform.rotation);
+                    GameObject soundExplosionS = Instantiate(soundExplosion);
                     //explosionS.transform.position = explosion.transform.position;
                     //Instantiate(explosion, hit.transform.position, hit.transform.rotation);
                     Destroy(explosionS, 1f);
+                    //Destroy(soundExplosionS, 1f);
                     }
                 }
             }

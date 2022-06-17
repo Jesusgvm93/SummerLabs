@@ -7,6 +7,9 @@ public class Victory : MonoBehaviour
 {
     public Transform objectToFollow;
     public float speed = 0.07f;
+    public int level;
+    public int time;
+    public AudioSource Wizard;
     void Update()
     {
         objectToFollow = GameObject.FindGameObjectWithTag("Wizard").GetComponent<Transform>();
@@ -19,7 +22,15 @@ public class Victory : MonoBehaviour
         Debug.Log("Collision");
         if (collision.gameObject.tag == "Wizard")
         {
-            SceneManager.LoadScene(2);
+            StartCoroutine("Dialogue");
         }
     }
+
+    private IEnumerator Dialogue()
+    {
+        Wizard.Play();
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(level);
+    }
+
 }

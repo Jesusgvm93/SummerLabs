@@ -5,25 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class History : MonoBehaviour
 {
-    public GameObject objectToDisable;
-    public GameObject objectToDisable2;
-    public GameObject objectToEnable;
-    public GameObject objectToEnable2;
+    public int level;
+    public int time;
+    private void Awake()
+    {
+        //GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>().Play();
+    }
     void Update()
     {
+
         StartCoroutine("FindPlane");
     }
 
     private IEnumerator FindPlane()
     {
-
-        yield return new WaitForSeconds(4f);
-        objectToEnable.SetActive(true);
-        objectToDisable.SetActive(false);
-        yield return new WaitForSeconds(4f);
-        objectToEnable2.SetActive(true);
-        objectToDisable2.SetActive(false);
-        yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene(3);
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(level);
     }
 }

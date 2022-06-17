@@ -11,7 +11,8 @@ public class Menu : MonoBehaviour
     public GameObject objectToEnable1;
     public GameObject objectToDisable1;
     public GameObject objectToEnable2;
-    public GameObject objectToEnable3;
+    public GameObject objectToDisable2;
+    public AudioSource intro;
 
 
     public void StartScene()
@@ -37,14 +38,24 @@ public class Menu : MonoBehaviour
         Debug.Log("Quit");
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene(9);
+    }
+
     private IEnumerator StartGame()
     {
-        /*objectToEnable3.SetActive(true);
-        objectToDisable.SetActive(false);
-        yield return new WaitForSeconds(0.5f);
-        objectToEnable2.SetActive(true);*/
-        yield return new WaitForSeconds(0.5f);
+        objectToEnable2.SetActive(true);
+        objectToDisable2.SetActive(false);
+        intro.Play();
+        yield return new WaitForSeconds(10f);
         SceneManager.LoadScene(2);
+    }
+
+    public void Mute()
+    {   
+        AudioListener.volume = 0;
+        var a = 1;
     }
 
 }

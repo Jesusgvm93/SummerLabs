@@ -19,7 +19,7 @@ public class FollowUp : MonoBehaviour
         Debug.Log("Collision");
         if (collision.gameObject.tag == "Wizard")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(7);
         }
         else if (collision.gameObject.tag == "Draugr")
         {
