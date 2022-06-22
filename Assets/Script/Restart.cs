@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
 {
-    void Update()
-    {
-
-    }
-
     public void Restart2()
     {
         SceneManager.LoadScene(0);

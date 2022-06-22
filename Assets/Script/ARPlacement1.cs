@@ -49,11 +49,6 @@ public class ARPlacement1 : MonoBehaviour
         UpdatemakerIndicator();
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
-
     void UpdatemakerIndicator()
     {
         if (spawendObject == null && placementPoseIsValid)

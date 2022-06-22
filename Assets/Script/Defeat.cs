@@ -12,7 +12,6 @@ public class Defeat : MonoBehaviour
 
     private IEnumerator Mainmenu()
     {
-
         yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(1);
     }
