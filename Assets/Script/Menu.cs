@@ -55,7 +55,6 @@ public class Menu : MonoBehaviour
     public void Mute()
     {   
         AudioListener.volume = 0;
-        var a = 1;
     }
 
 }

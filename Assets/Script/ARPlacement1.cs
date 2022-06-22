@@ -22,9 +22,6 @@ public class ARPlacement1 : MonoBehaviour
     private bool placementPoseIsValid = false;
     private bool placementPoseIsValid2 = false;
     private bool placementPoseIsValid3 = false;
-    private bool ready = false;
-    private bool ready2 = false;
-    private bool ready3 = false;
     public AudioSource setMarker;
     //public AudioSource findMarker;
 
