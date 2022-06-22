@@ -13,7 +13,7 @@ public class FollowUp : MonoBehaviour
         transform.forward = objectToFollow.position - transform.position;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Collision");
         if (collision.gameObject.tag == "Wizard")

@@ -47,7 +47,7 @@ public class ARPlacement1 : MonoBehaviour
         UpdatemakerIndicator();
     }
 
-    void UpdatemakerIndicator()
+    private void UpdatemakerIndicator()
     {
         if (spawendObject == null && placementPoseIsValid)
         {
@@ -67,7 +67,7 @@ public class ARPlacement1 : MonoBehaviour
         }
     }
 
-    void UpdatePlacementPose()
+    private void UpdatePlacementPose()
     {
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
@@ -92,18 +92,18 @@ public class ARPlacement1 : MonoBehaviour
         }
     }
 
-    void ARPlaceObject()
+    private void ARPlaceObject()
     {
         spawendObject = Instantiate(arObject, placementPose.position, placementPose.rotation);
         setMarker.Play();
     }
 
-    void ARPlaceObject2()
+    private void ARPlaceObject2()
     {
         spawendObject2 = Instantiate(arObject2, placementPose2.position, placementPose2.rotation);
     }
 
-    void ARPlaceObject3()
+    private void ARPlaceObject3()
     {
         spawendObject3 = Instantiate(arObject3, placementPose3.position, placementPose3.rotation);
     }

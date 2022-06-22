@@ -4,7 +4,7 @@ public class CheckSound : MonoBehaviour
 {
     private bool sound = false;
 
-    private void Awake()
+    void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
     }

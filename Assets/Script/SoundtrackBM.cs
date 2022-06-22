@@ -4,7 +4,7 @@ public class SoundtrackBM : MonoBehaviour
 {
     private AudioSource _audioSource;
 
-    private void Awake()
+    void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
         _audioSource = GetComponent<AudioSource>();

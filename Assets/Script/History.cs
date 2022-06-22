@@ -7,7 +7,7 @@ public class History : MonoBehaviour
     public int level;
     public int time;
 
-    private void Awake()
+    void Awake()
     {
         //GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>().Play();
     }
