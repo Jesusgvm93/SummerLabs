@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Defeat : MonoBehaviour
 {
-
     void Update()
     {
         StartCoroutine("Mainmenu");

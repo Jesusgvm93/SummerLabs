@@ -10,6 +10,7 @@ public class Magic : MonoBehaviour
     public GameObject explosion;
     public GameObject soundExplosion;
     public Camera arCamera;
+
     void Update()
     {
         if (Input.touchCount > 0 )      

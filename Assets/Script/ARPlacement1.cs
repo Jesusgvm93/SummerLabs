@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ARPlacement1 : MonoBehaviour
 {
-
     public GameObject arObject;
     public GameObject arObject2;
     public GameObject arObject3;
@@ -25,12 +24,10 @@ public class ARPlacement1 : MonoBehaviour
     public AudioSource setMarker;
     //public AudioSource findMarker;
 
-
     void Start()
     {
         aRRaycastManager = FindObjectOfType<ARRaycastManager>();
     }
-
 
     void Update()
     {
@@ -50,7 +47,6 @@ public class ARPlacement1 : MonoBehaviour
         }
         UpdatePlacementPose();
         UpdatemakerIndicator();
-       
     }
 
     private void FixedUpdate()
@@ -60,22 +56,17 @@ public class ARPlacement1 : MonoBehaviour
 
     void UpdatemakerIndicator()
     {
-        
-
         if (spawendObject == null && placementPoseIsValid)
         {
             markerIndicator.SetActive(true);
             markerIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
             //findMarker.Play();
-
-
         }
         else if (spawendObject2 == null && spawendObject3 == null && placementPoseIsValid2 && placementPoseIsValid3)
         {
             markerIndicator.SetActive(true);
             markerIndicator.transform.SetPositionAndRotation(placementPose2.position, placementPose2.rotation);
             markerIndicator.transform.SetPositionAndRotation(placementPose3.position, placementPose3.rotation);
-
         } 
         else
         {
@@ -108,7 +99,6 @@ public class ARPlacement1 : MonoBehaviour
         }
     }
 
-
     void ARPlaceObject()
     {
         spawendObject = Instantiate(arObject, placementPose.position, placementPose.rotation);
@@ -124,7 +114,4 @@ public class ARPlacement1 : MonoBehaviour
     {
         spawendObject3 = Instantiate(arObject3, placementPose3.position, placementPose3.rotation);
     }
-
- 
-
 }

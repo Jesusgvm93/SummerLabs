@@ -12,7 +12,6 @@ public class Logo : MonoBehaviour
 
     private IEnumerator Mainmenu()
     {
-
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(1);
     }

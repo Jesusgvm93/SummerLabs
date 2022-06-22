@@ -5,6 +5,7 @@ using UnityEngine;
 public class CheckSound : MonoBehaviour
 {
     private bool sound = false;
+
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
@@ -28,5 +29,4 @@ public class CheckSound : MonoBehaviour
             sound = false;
         }
     }
-
 }

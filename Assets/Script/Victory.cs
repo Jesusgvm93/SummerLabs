@@ -10,6 +10,7 @@ public class Victory : MonoBehaviour
     public int level;
     public int time;
     public AudioSource Wizard;
+
     void Update()
     {
         objectToFollow = GameObject.FindGameObjectWithTag("Wizard").GetComponent<Transform>();
@@ -32,5 +33,4 @@ public class Victory : MonoBehaviour
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(level);
     }
-
 }

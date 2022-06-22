@@ -13,11 +13,11 @@ public class Test1 : MonoBehaviour
     public GameObject wall;
     public Button shieldB;
     public GameObject objectToDisable;
+
     void Start()
     {
         Button btn = shieldB.GetComponent<Button>();
         btn.onClick.AddListener(Shield);
-
     }
 
     void Update()

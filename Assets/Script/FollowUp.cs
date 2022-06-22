@@ -7,6 +7,7 @@ public class FollowUp : MonoBehaviour
 {
     public Transform objectToFollow;
     public float speed = 0.07f;
+
     void Update()
     {
         objectToFollow = GameObject.FindGameObjectWithTag("Wizard").GetComponent<Transform>();
@@ -25,8 +26,5 @@ public class FollowUp : MonoBehaviour
         {
             Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
         }
-            
     }
-
-
 }

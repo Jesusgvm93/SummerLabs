@@ -14,7 +14,6 @@ public class Menu : MonoBehaviour
     public GameObject objectToDisable2;
     public AudioSource intro;
 
-
     public void StartScene()
     {
         StartCoroutine("StartGame");
@@ -56,5 +55,4 @@ public class Menu : MonoBehaviour
     {   
         AudioListener.volume = 0;
     }
-
 }

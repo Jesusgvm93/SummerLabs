@@ -10,6 +10,7 @@ public class ChangeRotation : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
     }
+
     void Update()
     {
         if (Input.touchCount > 0)
@@ -26,7 +27,6 @@ public class ChangeRotation : MonoBehaviour
                 Debug.Log("Right click");
                 transform.rotation = Quaternion.Euler(0, 90, 0);
             }
-
         }
 
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -37,6 +37,5 @@ public class ChangeRotation : MonoBehaviour
         {
             _animator.SetInteger("Attack", 0);
         }
-
     }
 }
