@@ -4,12 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Logo : MonoBehaviour
 {
-    void Update()
-    {
-        StartCoroutine("Mainmenu");
-    }
-
-    private IEnumerator Mainmenu()
+    IEnumerator Start()
     {
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(1);
