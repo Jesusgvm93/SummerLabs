@@ -12,12 +12,7 @@ public class History : MonoBehaviour
         //GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>().Play();
     }
 
-    void Update()
-    {
-        StartCoroutine("FindPlane");
-    }
-
-    private IEnumerator FindPlane()
+    IEnumerator Start()
     {
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(level);
