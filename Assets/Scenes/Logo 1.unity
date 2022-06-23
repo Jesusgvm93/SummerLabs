@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 28300891}
   - component: {fileID: 28300890}
   m_Layer: 0
-  m_Name: ChangeScene
+  m_Name: History
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,9 +149,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 28300889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59890de6e365ec049a6f6db92a4490f1, type: 3}
+  m_Script: {fileID: 11500000, guid: b02e38afba3c3264ca18a83bfa11dc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  time: 5
 --- !u!4 &28300891
 Transform:
   m_ObjectHideFlags: 0
