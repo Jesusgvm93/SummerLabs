@@ -9,11 +9,6 @@ public class CheckSound : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
-    /*public void Mute()
-    {
-        AudioListener.volume = 0;
-    }*/
-
     public void Mute()
     {
         if (sound == false)
